@@ -1,3 +1,11 @@
+
+/*
+  COLOR DE FONDO:
+  si nos salta esta excepcion, debemo JUSTIFICAR EN EL INFORME
+  que hereda este color de su elemento padre.
+
+*/
+
 /*Especificidad: 001*/
 body {
   font-family: Tahoma, sans-serif;
@@ -47,6 +55,7 @@ h1 {
   text-align: center;     
 }
 
+/*Especificidad: 001*/
 h2{
   color: #666666;
 }
@@ -54,6 +63,8 @@ h2{
 /*Especificidad: 001*/
 nav {
   
+  display: flex;
+
   background-color: #3FF2BD;
   border-radius: 1em;
 
@@ -68,6 +79,9 @@ nav {
 */
 /*Especificidad: 002*/
 nav > a {
+
+  flex-grow: 2;
+
   color : #fff;
 
   /* Relative size for the font*/
