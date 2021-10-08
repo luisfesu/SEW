@@ -4,12 +4,16 @@
   si nos salta esta excepcion, debemo JUSTIFICAR EN EL INFORME
   que hereda este color de su elemento padre.
 
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  https://caniuse.com/
+  https://webaim.org/resources/contrastchecker/
+  https://crispelayo.github.io/SEW_CSS/
 */
 
 /*Especificidad: 001*/
 body {
   font-family: Tahoma, sans-serif;
-  color: #818181;
+  color: #595959;
   background-color: #fff;
   
   padding: 2em;
@@ -35,6 +39,9 @@ body {
   border-right: 1em solid #3FF2BD;
 }
 
+img {
+  width: 100%;
+}
   
 /*Especificidad: 001*/
 h1 {
@@ -42,6 +49,8 @@ h1 {
   background-color:#f26740; 
   border-radius: 0.75em;
   
+  text-transform: uppercase;
+
   padding: 1.75em; 
   /* TO ASK:
       Porque hay cosas que meten margin solas?
@@ -64,14 +73,11 @@ h2{
 nav {
   
   display: flex;
+  justify-content:  flex-start;
 
   background-color: #3FF2BD;
   border-radius: 1em;
-
-  padding: 0.75em;
   margin-bottom: 1em;
-
-  text-align: left;
 }
 
 /* TO ASK:
@@ -80,21 +86,14 @@ nav {
 /*Especificidad: 002*/
 nav > a {
 
-  flex-grow: 2;
-
   color : #fff;
 
   /* Relative size for the font*/
   font-size: larger;
-
-  /* TO ASK:
-      Como hago para que el content de nav (los <a>)
-      sean la caja entera y no solo el texto???
-  */
   padding: 0.45em;
-  background-color: #0AA678;
   margin: 0.5em;
 
+  background-color: #0AA678;
   border-radius: 0.5em;
 }
 
@@ -103,8 +102,25 @@ table{
   border-collapse: collapse;
 }
 
+table caption {
+  visibility: hidden;
+}
+
 /* TO ASK:
       diferencia entre nav > a Y nav a
+
+      section > a => solo afecta a <a>1 (hijo)
+      section   a => afecta a todos los <a> dentro
+
+      <section>
+      <p> 
+        <a>1....
+      </>
+
+      <a>2...
+
+      </>
+
 */
 /*Especificidad: 002*/
 table th, td, tr{
