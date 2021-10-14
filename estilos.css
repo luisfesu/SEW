@@ -39,6 +39,7 @@ body {
   border-right: 1em solid #3FF2BD;
 }
 
+/*Especificidad: 001*/
 img {
   width: 100%;
 }
