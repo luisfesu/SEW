@@ -70,17 +70,6 @@ h2{
   color: #666666;
 }
 
-/*Especificidad: 001*/
-nav {
-  
-  display: flex;
-  justify-content:  flex-start;
-
-  background-color: #3FF2BD;
-  border-radius: 1em;
-  margin-bottom: 1em;
-}
-
 /* TO ASK:
       diferencia entre nav > a Y nav a
 */
@@ -133,5 +122,13 @@ table th, td, tr{
   border-style: solid;
 }
 
+/* List Style: */
 
-  
+aside ul {
+  list-style-type: none;
+}
+
+aside li{
+  text-align: center;
+  padding: 1em;
+}

@@ -5,34 +5,49 @@ main{
     grid-column-gap: 1em; /*Esto estara bien?*/
     grid-row-gap: 1em; /*Esto estara bien?*/
 
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 4fr 1fr;
     grid-template-rows:auto;
 
 
 }
+/*Especificidad: 001*/
+nav {
+
+    display: flex;
+    justify-content:  flex-start;
+
+    background-color: #3FF2BD;
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
 
 main aside {
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
 
     border-left: 0.25em solid rgba(100, 100, 100, 0.459);
     padding: 1em;
 
     grid-column: 2;
     grid-row: 1 /  span 3;
+
+    justify-content: left;
 }
 
 section {
-
-    grid-column: 1;
-
     display:grid;
-
+    grid-column: 1;
     grid-template-columns: 2fr 1fr;
 
     grid-auto-rows: auto;
     grid-column-gap: 1em; /*Esto estara bien?*/
-/*
-   grid-template-areas: "header header"; 
-   */
+    grid-auto-flow:dense;
+    /*
+    grid-template-areas: "header header"; 
+    */
 }
 
 section h2 {
@@ -44,20 +59,32 @@ section h2 {
 }
 
 section p {
+    /*
     grid-column: 1;
     grid-row-start: 2;
+    */
+    position:relative;
+    grid-column: span 2;
 }
 
 section img {
-    grid-column: 2;
+    
+    grid-column: span 2;
+    grid-row-start: auto;
     justify-self:stretch;
 }
 
 section audio {
-    justify-self: center;
+    position:relative;
+    justify-self: stretch;
 }
 
+section ul {
+    grid-column-start: 1;
+    grid-row-start: auto;
+    grid-column: span 2;
 
+}
 
 section video {
     grid-column: 1;
