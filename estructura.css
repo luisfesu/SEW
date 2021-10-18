@@ -90,3 +90,8 @@ section video {
     grid-column: 1;
     justify-self: center;
 }
+
+
+section table {
+    grid-column: span 2;
+}
