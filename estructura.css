@@ -111,6 +111,7 @@ section ul {
 
 /*Especificidad: 002*/
 section table {
+    justify-self:stretch;
     font-size: larger;
     grid-column: span 2;
 }
