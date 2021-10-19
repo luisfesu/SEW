@@ -1,15 +1,3 @@
-
-main{
-    display: grid;
-
-    grid-column-gap: 1em; /*Esto estara bien?*/
-    grid-row-gap: 1em; /*Esto estara bien?*/
-
-    grid-template-columns: 4fr 1fr;
-    grid-template-rows:auto;
-
-
-}
 /*Especificidad: 001*/
 nav {
 
@@ -20,15 +8,32 @@ nav {
     border-radius: 1em;
     margin-bottom: 1em;
 }
+/*Especificidad: 001*/
+main{
+    display: grid;
 
+    grid-column-gap: 1em; /*Esto estara bien?*/
+    grid-row-gap: 1em; /*Esto estara bien?*/
+
+    grid-template-columns: 4fr auto;
+    grid-template-rows:auto;
+}
+   
+
+/*Especificidad: 002*/
 main aside {
 
+    
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    
 
+    max-width: 7em;
+    min-width: 4em;
 
-    border-left: 0.25em solid rgba(100, 100, 100, 0.459);
+    border-left: 0.25em solid #646464;
+    
     padding: 1em;
 
     grid-column: 2;
@@ -37,19 +42,26 @@ main aside {
     justify-content: left;
 }
 
+/*
+    Permite añadir un pequeño margen al final de la ultima seccion
+*/
+/*Especificidad: 011*/
+section:last-of-type {
+    margin-bottom: 1em;
+}
+
+/*Especificidad: 001*/
 section {
     display:grid;
     grid-column: 1;
     grid-template-columns: 2fr 1fr;
 
     grid-auto-rows: auto;
-    grid-column-gap: 1em; /*Esto estara bien?*/
+    grid-column-gap: 1em; 
     grid-auto-flow:dense;
-    /*
-    grid-template-areas: "header header"; 
-    */
 }
 
+/*Especificidad: 002*/
 section h2 {
     /*
     De la primera columna hasta la ultima (-1)
@@ -58,6 +70,7 @@ section h2 {
     grid-row-start: 1;
 }
 
+/*Especificidad: 002*/
 section p {
     /*
     grid-column: 1;
@@ -67,18 +80,28 @@ section p {
     grid-column: span 2;
 }
 
+/*Especificidad: 002*/
 section img {
     
     grid-column: span 2;
     grid-row-start: auto;
     justify-self:stretch;
 }
+/*Especificidad: 002*/
+section video {
+    grid-column: span 2;
+    grid-row-start: auto;
+    justify-self: stretch;
+    
+}
 
+/*Especificidad: 002*/
 section audio {
     position:relative;
     justify-self: stretch;
 }
 
+/*Especificidad: 002*/
 section ul {
     grid-column-start: 1;
     grid-row-start: auto;
@@ -86,12 +109,8 @@ section ul {
 
 }
 
-section video {
-    grid-column: 1;
-    justify-self: center;
-}
-
-
+/*Especificidad: 002*/
 section table {
     grid-column: span 2;
 }
+
