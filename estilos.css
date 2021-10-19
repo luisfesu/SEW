@@ -180,7 +180,7 @@ footer > a {
   color: #fff;
 }
 
-
 form label, input, legend{
-  font-size: 1.75em;
+  font-size: 2vmax;
 }
+

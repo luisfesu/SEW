@@ -109,6 +109,11 @@ section ul {
 
 }
 
+section form {
+    grid-column-start: 1;
+    grid-row-start: auto;
+}
+
 /*Especificidad: 002*/
 section table {
     justify-self:stretch;
