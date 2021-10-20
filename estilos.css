@@ -176,6 +176,7 @@ footer {
   
 }
 
+/*Especificidad: 002*/
 footer > img {
   max-height:4em;
   max-width:4em;
@@ -187,6 +188,7 @@ footer > a {
   color: #fff;
 }
 
+/*Especificidad: 002*/
 form label, input, legend{
   font-size: 2.5vmin;
 }
